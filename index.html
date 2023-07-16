@@ -1,0 +1,287 @@
+
+
+
+
+
+<html >
+
+<head>
+
+    <link  href="logo.png" >
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesom/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Yummy</title>
+</head>
+
+
+
+<body class="bg-black" >
+
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center" style="display: none;">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0" style="left: 0px;">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Search</li>
+                    <li onclick="getCategories(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Categories</li>
+                    <li onclick="getArea(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Area</li>
+                    <li onclick="getIngredients(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Ingredients</li>
+                    <li onclick="showContacts(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Contact</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center  bg-info text-black mmmmmm">
+            <img class="pic " src="logo.png" >
+            <i class="fa-solid open-close-icon fa-x"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container w-75" id="searchContainer">
+        
+    </div>
+
+
+    <div class="container bg-black">
+        <div class="row py-5  " id="rowData">
+
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53065')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Sushi</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52978')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/mlchx21564916997.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Kumpir</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53026')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/n3xxd91598732796.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Tamiya</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52785')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/wuxrtu1483564410.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Dal fry</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52804')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Poutine</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52844')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Lasagne</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52929')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/txsupu1511815755.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Timbits</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52948')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/1525876468.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Wontons</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52971')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Kafteji</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53013')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Big Mac</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53027')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Koshari</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52769')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Kapsalon</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52802')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Fish pie</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52854')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Pancakes</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52887')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/utxqpt1511639216.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Kedgeree</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52906')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Flamiche</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52980')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/hyarod1565090529.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Stamppot</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53006')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/ctg8jd1585563097.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Moussaka</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('53028')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Shawarma</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52791')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/uuxwvq1483907861.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Eton Mess</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52811')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Ribollita</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52871')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/wrustq1511475474.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Yaki Udon</h3>
+                </div>
+            </div>
+    </div>
+    
+    <div class="col-md-3">
+            <div onclick="getMealDetails('52926')" class="meal position-relative overflow-hidden rounded-2 cursor-pointer">
+                <img class="w-100" src="https://www.themealdb.com/images/media/meals/ytpstt1511814614.jpg" alt="" srcset="">
+                <div class="meal-layer position-absolute d-flex align-items-center text-black p-2">
+                    <h3>Tourtiere</h3>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+
+    
+
+    
+
+
+    <script src="jQuary/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+
+
+</body>
+</html>
+
+
